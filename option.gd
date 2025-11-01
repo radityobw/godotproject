@@ -11,13 +11,16 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://level-select.tscn")
+func _on_home_pressed() -> void:
+	get_tree().change_scene_to_file("res://main-menu.tscn")
 
+var music_on := true
 
-func _on_option_pressed() -> void:
-	get_tree().change_scene_to_file("res://option.tscn")
+func _on_music_pressed() -> void:
+	if Backsound.playing:
+		Backsound.stop()
+		music_on = false
 
-
-func _on_exit_pressed() -> void:
-	get_tree().quit()
+	else:
+		Backsound.play()
+		music_on = true

@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://ct7kqo4je8hmy"]
+
+[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://FreeGUI/png/BG.png" id="1_l82yo"]
+[ext_resource type="Script" uid="uid://by5ru8111c1hr" path="res://option.gd" id="1_uhspr"]
+[ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://FreeGUI/png/Window.png" id="2_uhspr"]
+[ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://brady_bunch/BradBunR.ttf" id="3_c6ia3"]
+[ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="4_v4yl2"]
+[ext_resource type="PackedScene" uid="uid://fjjrd1pceqkw" path="res://music-button.tscn" id="6_c6ia3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piv12"]
+texture = ExtResource("1_l82yo")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nvuw"]
+atlas = ExtResource("2_uhspr")
+region = Rect2(1057, 162, 926, 741)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_td4eo"]
+atlas = ExtResource("4_v4yl2")
+region = Rect2(1551, 972, 181, 190)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrby8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqsdl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6618f"]
+atlas = ExtResource("4_v4yl2")
+region = Rect2(1551, 972, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cn5g7"]
+texture = SubResource("AtlasTexture_6618f")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uhspr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_piv12")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -641.5
+offset_top = -474.5
+offset_right = 641.5
+offset_bottom = 474.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4nvuw")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 962.0
+offset_top = 77.0
+offset_right = 1410.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("3_c6ia3")
+theme_override_font_sizes/font_size = 100
+text = "Pengaturan"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Panel/Label"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 541.0
+offset_right = 470.0
+offset_bottom = 692.0
+theme_override_fonts/font = ExtResource("3_c6ia3")
+theme_override_font_sizes/font_size = 100
+text = "Musik"
+horizontal_alignment = 1
+
+[node name="Home" type="Button" parent="."]
+layout_mode = 0
+offset_right = 181.0
+offset_bottom = 190.0
+theme_override_icons/icon = SubResource("AtlasTexture_td4eo")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lrby8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sqsdl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cn5g7")
+
+[node name="TextureButton" parent="." instance=ExtResource("6_c6ia3")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.5
+offset_top = -94.5
+offset_right = 90.5
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_music_pressed"]

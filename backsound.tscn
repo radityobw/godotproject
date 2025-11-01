@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d16bqtxymgfds"]
+
+[ext_resource type="AudioStream" uid="uid://del6lskve8oqh" path="res://Wallpaper - Kevin Macleod.mp3" id="1_st0dk"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+unique_name_in_owner = true
+stream = ExtResource("1_st0dk")
+volume_db = 20.971
+autoplay = true

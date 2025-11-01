@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://fjjrd1pceqkw"]
+
+[ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="1_ny2du"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj3pb"]
+atlas = ExtResource("1_ny2du")
+region = Rect2(2148, 1844, 181, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx8qi"]
+atlas = ExtResource("1_ny2du")
+region = Rect2(2148, 1844, 181, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icg2x"]
+atlas = ExtResource("1_ny2du")
+region = Rect2(2761, 1844, 181, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny2du"]
+atlas = ExtResource("1_ny2du")
+region = Rect2(2148, 1844, 181, 189)
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = SubResource("AtlasTexture_hj3pb")
+texture_hover = SubResource("AtlasTexture_fx8qi")
+texture_disabled = SubResource("AtlasTexture_icg2x")
+texture_focused = SubResource("AtlasTexture_ny2du")

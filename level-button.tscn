@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp5ennbbw03t6"]
+
+[ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="1_oqga1"]
+[ext_resource type="Script" uid="uid://bui15vwhlje03" path="res://level_button.gd" id="2_3j03e"]
+[ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://brady_bunch/BradBunR.ttf" id="2_t25mp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqga1"]
+atlas = ExtResource("1_oqga1")
+region = Rect2(548, 668, 181, 189)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t25mp"]
+atlas = ExtResource("1_oqga1")
+region = Rect2(1389, 668, 182, 189)
+
+[node name="TextureButton" type="TextureButton"]
+offset_top = 1.0
+offset_right = 181.0
+offset_bottom = 190.0
+texture_normal = SubResource("AtlasTexture_oqga1")
+texture_disabled = SubResource("AtlasTexture_t25mp")
+stretch_mode = 5
+script = ExtResource("2_3j03e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0.6901961, 0.8627451, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_t25mp")
+theme_override_font_sizes/font_size = 150
+text = " "
+horizontal_alignment = 1
