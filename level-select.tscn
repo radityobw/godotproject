@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://peahobrq6jl2"]
+[gd_scene load_steps=15 format=3 uid="uid://peahobrq6jl2"]
 
-[ext_resource type="Script" uid="uid://cso3d41pjfaee" path="res://level_select.gd" id="1_ny0sn"]
-[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://FreeGUI/png/BG.png" id="1_wfp5c"]
+[ext_resource type="Script" path="res://level_select.gd" id="1_ny0sn"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://FreeGUI/png/Button.png" id="2_kcncs"]
+[ext_resource type="Texture2D" uid="uid://c1awabv2y8466" path="res://bggray.png" id="2_sw5pt"]
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://FreeGUI/png/Window.png" id="2_vffbi"]
+[ext_resource type="Script" uid="uid://r8crgg4wjkq4" path="res://bgdyn.gd" id="3_sw5pt"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://brady_bunch/BradBunR.ttf" id="3_vffbi"]
 [ext_resource type="PackedScene" uid="uid://dp5ennbbw03t6" path="res://level-button.tscn" id="4_qunhn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b362m"]
-texture = ExtResource("1_wfp5c")
+texture = ExtResource("2_sw5pt")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny0sn"]
 atlas = ExtResource("2_vffbi")
@@ -50,6 +51,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_b362m")
+script = ExtResource("3_sw5pt")
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 layout_mode = 1
