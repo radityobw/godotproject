@@ -6,7 +6,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oqga1"]
 atlas = ExtResource("1_oqga1")
-region = Rect2(548, 668, 181, 189)
+region = Rect2(173, 433, 425, 189)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t25mp"]
 atlas = ExtResource("1_oqga1")
