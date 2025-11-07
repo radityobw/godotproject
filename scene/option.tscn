@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ct7kqo4je8hmy"]
+[gd_scene load_steps=25 format=3 uid="uid://ct7kqo4je8hmy"]
 
 [ext_resource type="Script" uid="uid://by5ru8111c1hr" path="res://script/option.gd" id="1_lkh8f"]
 [ext_resource type="Script" uid="uid://cqsh6jlmhwy8y" path="res://script/parallax_background.gd" id="2_70qle"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="3_70qle"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="4_fyn3v"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="5_trtje"]
-[ext_resource type="PackedScene" uid="uid://fjjrd1pceqkw" path="res://scene/music-button.tscn" id="6_22n8n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyn3v"]
 
@@ -34,6 +33,41 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lkh8f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkh8f"]
+atlas = ExtResource("5_trtje")
+region = Rect2(2148, 1844, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i838a"]
+texture = SubResource("AtlasTexture_lkh8f")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70qle"]
+atlas = ExtResource("5_trtje")
+region = Rect2(2557, 1844, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fyn3v"]
+texture = SubResource("AtlasTexture_70qle")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtje"]
+atlas = ExtResource("5_trtje")
+region = Rect2(2352, 1844, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22n8n"]
+texture = SubResource("AtlasTexture_trtje")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i838a"]
+atlas = ExtResource("5_trtje")
+region = Rect2(2761, 1190, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_70qle"]
+texture = SubResource("AtlasTexture_i838a")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyn3v"]
+atlas = ExtResource("5_trtje")
+region = Rect2(2557, 1190, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trtje"]
+texture = SubResource("AtlasTexture_fyn3v")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -114,7 +148,8 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_sqsdl")
 theme_override_styles/hover = SubResource("StyleBoxTexture_cn5g7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_lkh8f")
 
-[node name="TextureButton" parent="." instance=ExtResource("6_22n8n")]
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(181, 190)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -122,11 +157,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -90.5
-offset_top = -94.5
+offset_top = -95.0
 offset_right = 90.5
-offset_bottom = 94.5
+offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_i838a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fyn3v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_22n8n")
+
+[node name="unknown" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2393.0
+offset_top = 1073.0
+offset_right = 2400.0
+offset_bottom = 1080.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_70qle")
+theme_override_styles/hover = SubResource("StyleBoxTexture_trtje")
 
 [connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
-[connection signal="pressed" from="TextureButton" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="unknown" to="." method="_on_unknown_pressed"]

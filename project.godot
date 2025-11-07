@@ -20,9 +20,12 @@ config/image="uid://dfitmw0pi2y2f"
 
 [autoload]
 
-Backsound="*res://scene/backsound.tscn"
-SelectSfx="*res://scene/select-sfx.tscn"
-RyoLocalNotifPlugin="*res://addons/RyoLocalNotifPlugin/RyoLocalNotifPluginRuntime.gd"
+Backsound="*res://scene/sfx/backsound.tscn"
+SelectSfx="*res://scene/sfx/select-sfx.tscn"
+RyoLocalNotifPlugin="res://addons/RyoLocalNotifPlugin/RyoLocalNotifPluginRuntime.gd"
+Correctsfx="*res://scene/sfx/correctsfx.tscn"
+Wrongsfx="*res://scene/sfx/wrongsfx.tscn"
+InventoryManager="*res://script/InventoryManager.gd"
 
 [display]
 
@@ -35,7 +38,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/NotificationPlugin/plugin.cfg", "res://addons/ryolocalnotifplugin/plugin.cfg", "res://addons/utilsgodot/plugin.cfg")
+enabled=PackedStringArray("res://addons/ryolocalnotifplugin/plugin.cfg")
 
 [input_devices]
 

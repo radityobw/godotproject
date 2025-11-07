@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwpr14r382rxj"]
+[gd_scene load_steps=4 format=3 uid="uid://dwpr14r382rxj"]
 
-[ext_resource type="Script" uid="uid://cb7umrx34ob2y" path="res://script/dragndrop.gd" id="1_hdcb2"]
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="2_yn7ep"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bmpm7"]
@@ -16,7 +15,6 @@ custom_minimum_size = Vector2(181, 190)
 offset_right = 40.0
 offset_bottom = 40.0
 expand_mode = 1
-script = ExtResource("1_hdcb2")
 
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true

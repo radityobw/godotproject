@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2fqv5eqg4cif"
-path="res://.godot/imported/Inside Out Bold Cat.png-b7bb9d59527df6a51b0497f69146693c.ctex"
+uid="uid://bupw8my2mwqv4"
+path="res://.godot/imported/malam.jpeg-05252b1157e6d59f88d59cdfef96c1bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/picture/Inside Out Bold Cat.png"
-dest_files=["res://.godot/imported/Inside Out Bold Cat.png-b7bb9d59527df6a51b0497f69146693c.ctex"]
+source_file="res://assets/picture/malam.jpeg"
+dest_files=["res://.godot/imported/malam.jpeg-05252b1157e6d59f88d59cdfef96c1bc.ctex"]
 
 [params]
 

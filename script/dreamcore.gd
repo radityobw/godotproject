@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_previous_pressed() -> void:
 	$VideoStreamPlayer.stop()
-	get_tree().change_scene_to_file("res://scene/lv1.tscn")
+	get_tree().change_scene_to_file("res://scene/main-menu.tscn")
 	Backsound.play()

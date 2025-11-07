@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cqsh6jlmhwy8y" path="res://script/parallax_background.gd" id="4_85jwq"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="4_ogt8j"]
 [ext_resource type="Texture2D" uid="uid://diowur4k2ai5d" path="res://assets/picture/langakah kecil no bg.png" id="6_4be4o"]
-[ext_resource type="Script" uid="uid://v5aj7u1afy83" path="res://addons/NotificationPlugin/main.gd" id="7_ogt8j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j3jwc"]
 texture = ExtResource("2_85jwq")
@@ -80,6 +79,10 @@ expand_margin_bottom = 2.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_upudm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_crh45"]
+
+[sub_resource type="GDScript" id="GDScript_4be4o"]
+script/source = "extends Node
+"
 
 [node name="Main-menu" type="Control"]
 layout_mode = 3
@@ -232,9 +235,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="NotificationManager" type="Node" parent="."]
-script = ExtResource("7_ogt8j")
-metadata/_custom_type_script = "uid://v5aj7u1afy83"
+[node name="Node" type="Node" parent="."]
+script = SubResource("GDScript_4be4o")
 
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_option_pressed"]

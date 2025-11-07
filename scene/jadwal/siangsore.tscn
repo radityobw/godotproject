@@ -1,0 +1,420 @@
+[gd_scene load_steps=40 format=3 uid="uid://dtdhomnjs6vs4"]
+
+[ext_resource type="Script" uid="uid://dr63vm6jpr37q" path="res://script/jadwal.gd" id="1_r73ru"]
+[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="2_p8qgw"]
+[ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="3_mvy1r"]
+[ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="4_l22se"]
+[ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="5_lud57"]
+[ext_resource type="Script" uid="uid://cn4ml40vlmp6m" path="res://script/grid_container.gd" id="6_8ss8r"]
+[ext_resource type="PackedScene" uid="uid://8e772vyhgfrr" path="res://scene/tools/dragndrop.tscn" id="7_a1itv"]
+[ext_resource type="Script" uid="uid://d1xloqnty8od" path="res://scene/tools/dragndrop2.gd" id="8_p8qgw"]
+[ext_resource type="Script" uid="uid://dq04uttsrfd2s" path="res://script/v_box_container.gd" id="8_yag5k"]
+[ext_resource type="Texture2D" uid="uid://d2fqv5eqg4cif" path="res://icons/ioboldcat.png" id="9_t0k2n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
+texture = ExtResource("2_p8qgw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8qgw"]
+atlas = ExtResource("3_mvy1r")
+region = Rect2(2042, 249, 926, 654)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7y1tx"]
+texture = SubResource("AtlasTexture_p8qgw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qh1k"]
+atlas = ExtResource("4_l22se")
+region = Rect2(606, 2716, 181, 189)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehxhf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_026ki"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvy1r"]
+atlas = ExtResource("4_l22se")
+region = Rect2(1551, 972, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpp2d"]
+texture = SubResource("AtlasTexture_mvy1r")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwnvn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ledt"]
+atlas = ExtResource("3_mvy1r")
+region = Rect2(2042, 249, 926, 654)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l22se"]
+atlas = ExtResource("3_mvy1r")
+region = Rect2(2150, 37, 703, 183)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j82lm"]
+texture = SubResource("AtlasTexture_l22se")
+
+[sub_resource type="Theme" id="Theme_cw85m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lud57"]
+atlas = ExtResource("3_mvy1r")
+region = Rect2(2986, 2974, 479, 605)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cw85m"]
+texture = SubResource("AtlasTexture_lud57")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ss8r"]
+atlas = ExtResource("4_l22se")
+region = Rect2(197, 2716, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6f31m"]
+texture = SubResource("AtlasTexture_8ss8r")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1itv"]
+atlas = ExtResource("4_l22se")
+region = Rect2(401, 2716, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apx17"]
+texture = SubResource("AtlasTexture_a1itv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yag5k"]
+atlas = ExtResource("4_l22se")
+region = Rect2(197, 2716, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_weleg"]
+texture = SubResource("AtlasTexture_yag5k")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uahrx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0k2n"]
+atlas = ExtResource("4_l22se")
+region = Rect2(197, 2498, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcqrm"]
+texture = SubResource("AtlasTexture_t0k2n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yfa3"]
+atlas = ExtResource("4_l22se")
+region = Rect2(401, 2498, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pfjsq"]
+texture = SubResource("AtlasTexture_5yfa3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3swo"]
+atlas = ExtResource("4_l22se")
+region = Rect2(197, 2498, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uahrx"]
+texture = SubResource("AtlasTexture_j3swo")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7y1tx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r73ru")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sfmxr")
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7y1tx")
+
+[node name="Home" type="Button" parent="Panel2"]
+z_index = 3
+layout_mode = 0
+offset_left = 98.0
+offset_top = 126.0
+offset_right = 279.0
+offset_bottom = 316.0
+theme_override_icons/icon = SubResource("AtlasTexture_0qh1k")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ehxhf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_026ki")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fpp2d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwnvn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1ledt")
+
+[node name="TextureRect2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -351.5
+offset_right = 351.5
+offset_bottom = 275.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_j82lm")
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.5
+offset_top = 50.0
+offset_right = 0.5
+offset_bottom = -153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 60
+text = "Jadwal Harian Anak"
+horizontal_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 327.0
+offset_right = 2104.0
+offset_bottom = 863.0
+theme_override_constants/h_separation = 350
+theme_override_constants/v_separation = 250
+columns = 5
+
+[node name="Label" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "1."
+
+[node name="Label2" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "2	."
+
+[node name="Label3" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "3."
+
+[node name="Label4" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "4."
+
+[node name="Label5" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "5."
+
+[node name="Label6" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "6."
+
+[node name="Label7" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "7."
+
+[node name="Label8" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "8."
+
+[node name="Label9" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "9."
+
+[node name="Label10" type="Label" parent="GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_lud57")
+theme_override_font_sizes/font_size = 50
+text = "10."
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -852.5
+offset_top = -217.0
+offset_right = 852.5
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 100
+columns = 5
+script = ExtResource("6_8ss8r")
+
+[node name="grid_0" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_1" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_2" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_3" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_4" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_5" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_6" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_7" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_8" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="grid_9" parent="GridContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 2137.0
+offset_top = 129.0
+offset_right = 2395.0
+offset_bottom = 897.0
+theme = SubResource("Theme_cw85m")
+theme_override_styles/panel = SubResource("StyleBoxTexture_cw85m")
+draw_focus_border = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/separation = 150
+alignment = 1
+script = ExtResource("8_yag5k")
+
+[node name="scroll_0" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_1" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+texture = ExtResource("9_t0k2n")
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="openscrollbtn" type="Button" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(181, 190)
+layout_mode = 0
+offset_left = 2141.0
+offset_top = 470.0
+offset_right = 2322.0
+offset_bottom = 660.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6f31m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_apx17")
+theme_override_styles/hover = SubResource("StyleBoxTexture_weleg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uahrx")
+
+[node name="closescrollbtn" type="Button" parent="."]
+custom_minimum_size = Vector2(181, 190)
+layout_mode = 0
+offset_left = 1972.0
+offset_top = 472.0
+offset_right = 2153.0
+offset_bottom = 662.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xcqrm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pfjsq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uahrx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7y1tx")
+
+[connection signal="pressed" from="Panel2/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="openscrollbtn" to="." method="_on_openscrollbtn_pressed"]
+[connection signal="pressed" from="closescrollbtn" to="." method="_on_closescrollbtn_pressed"]

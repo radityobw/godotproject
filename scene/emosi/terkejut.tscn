@@ -1,0 +1,294 @@
+[gd_scene load_steps=36 format=3 uid="uid://brer373hqt8rt"]
+
+[ext_resource type="Script" uid="uid://d0se16n4831ys" path="res://script/terkejut.gd" id="1_nk246"]
+[ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="2_qti6g"]
+[ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="3_2l5va"]
+[ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="4_j75w5"]
+[ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="5_h6y07"]
+[ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/tools/notdragndrop.tscn" id="6_nx8r4"]
+[ext_resource type="Texture2D" uid="uid://dirnh5xmvu5v5" path="res://assets/picture/EkspresiTerkejut.png" id="7_psrll"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
+texture = ExtResource("2_qti6g")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ledt"]
+atlas = ExtResource("3_2l5va")
+region = Rect2(2042, 249, 926, 654)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcdo5"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(606, 2716, 181, 189)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p65av"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3b5d1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf50q"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(1551, 972, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcabu"]
+texture = SubResource("AtlasTexture_sf50q")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d6et3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr52l"]
+atlas = ExtResource("3_2l5va")
+region = Rect2(2150, 37, 703, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65av"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(173, 433, 425, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3b5d1"]
+texture = SubResource("AtlasTexture_p65av")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcabu"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(629, 433, 425, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d6et3"]
+texture = SubResource("AtlasTexture_wcabu")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imn6g"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(173, 433, 425, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dr4mm"]
+texture = SubResource("AtlasTexture_imn6g")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8hi76"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgx08"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11wwb"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(173, 433, 425, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1pl3v"]
+texture = SubResource("AtlasTexture_11wwb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp15j"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(1085, 433, 426, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ypsn5"]
+texture = SubResource("AtlasTexture_mp15j")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhro4"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(173, 433, 425, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_km55i"]
+texture = SubResource("AtlasTexture_dhro4")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7b8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qivqh"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(3297, 755, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gcdo5"]
+texture = SubResource("AtlasTexture_qivqh")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b5d1"]
+atlas = ExtResource("4_j75w5")
+region = Rect2(3502, 537, 181, 189)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_imn6g"]
+texture = SubResource("AtlasTexture_3b5d1")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nk246")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sfmxr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_1ledt")
+
+[node name="Home" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 126.0
+offset_right = 279.0
+offset_bottom = 316.0
+theme_override_icons/icon = SubResource("AtlasTexture_gcdo5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p65av")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3b5d1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wcabu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d6et3")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -351.5
+offset_right = 351.5
+offset_bottom = 275.0
+grow_horizontal = 2
+texture = SubResource("AtlasTexture_mr52l")
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.5
+offset_top = 50.0
+offset_right = 0.5
+offset_bottom = -153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_h6y07")
+theme_override_font_sizes/font_size = 60
+text = "Mengenal Emosi Anak"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 554.0
+offset_right = 1257.0
+offset_bottom = 624.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_h6y07")
+theme_override_font_sizes/font_size = 50
+text = "Terkejut"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -855.0
+offset_top = -463.0
+offset_right = 845.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="Btn1" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_3b5d1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d6et3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dr4mm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8hi76")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vgx08")
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/Btn1"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 372.0
+offset_bottom = 186.0
+theme_override_fonts/font = ExtResource("5_h6y07")
+theme_override_font_sizes/font_size = 50
+text = "Diam lalu pegang dada/peluk diri"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Btn2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1pl3v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ypsn5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_km55i")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8hi76")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7b8l")
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/Btn2"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 51.0
+offset_right = 309.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("5_h6y07")
+theme_override_font_sizes/font_size = 50
+text = "Memukul"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect3" parent="." instance=ExtResource("6_nx8r4")]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.0
+offset_top = 328.0
+offset_right = 79.0
+offset_bottom = 518.0
+grow_horizontal = 2
+texture = ExtResource("7_psrll")
+
+[node name="correctpanel" type="Panel" parent="."]
+z_index = 3
+custom_minimum_size = Vector2(1080, 1080)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -540.0
+offset_right = 540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gcdo5")
+
+[node name="wrongpanel" type="Panel" parent="."]
+z_index = 3
+custom_minimum_size = Vector2(1080, 1080)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -540.0
+offset_right = 540.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_imn6g")
+
+[connection signal="pressed" from="TextureRect/Home" to="." method="_on_backterkejut_pressed"]
+[connection signal="pressed" from="HBoxContainer/Btn1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Btn2" to="." method="_on_btn_2_pressed"]

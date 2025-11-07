@@ -1,12 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://peahobrq6jl2"]
+[gd_scene load_steps=21 format=3 uid="uid://peahobrq6jl2"]
 
 [ext_resource type="Script" uid="uid://cso3d41pjfaee" path="res://script/level_select.gd" id="1_f8mdw"]
 [ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="2_ajvc4"]
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="3_oy5py"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="4_1m5pn"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="5_wtyro"]
-[ext_resource type="PackedScene" uid="uid://dp5ennbbw03t6" path="res://scene/level-button.tscn" id="6_p4j5i"]
+[ext_resource type="PackedScene" uid="uid://dp5ennbbw03t6" path="res://scene/tools/level-button.tscn" id="6_p4j5i"]
 [ext_resource type="Texture2D" uid="uid://b5cbm66ott1pe" path="res://assets/picture/belajar.jpeg" id="7_1m5pn"]
+[ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/tools/notdragndrop.tscn" id="7_wtyro"]
 [ext_resource type="Script" uid="uid://cqsh6jlmhwy8y" path="res://script/parallax_background.gd" id="8_oy5py"]
 [ext_resource type="Texture2D" uid="uid://6blhysktenng" path="res://assets/picture/senyum.jpeg" id="8_wtyro"]
 
@@ -37,11 +38,11 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajvc4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oy5py"]
-texture = ExtResource("7_1m5pn")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4j5i"]
 texture = ExtResource("8_wtyro")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oy5py"]
+texture = ExtResource("7_1m5pn")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -111,21 +112,43 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_sw5pt")
 theme_override_styles/hover = SubResource("StyleBoxTexture_pqee4")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ajvc4")
 
-[node name="Panel3" type="Panel" parent="."]
+[node name="TextureRect" parent="." instance=ExtResource("7_wtyro")]
+z_index = 1
 layout_mode = 0
-offset_left = 733.0
-offset_top = 400.0
-offset_right = 1133.0
-offset_bottom = 700.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_oy5py")
+offset_left = 743.0
+offset_top = 320.0
+offset_right = 1112.0
+offset_bottom = 658.0
+texture = ExtResource("7_1m5pn")
+script = null
+
+[node name="TextureRect2" parent="." instance=ExtResource("7_wtyro")]
+z_index = 1
+layout_mode = 0
+offset_left = 1270.0
+offset_top = 324.0
+offset_right = 1639.0
+offset_bottom = 662.0
+texture = ExtResource("8_wtyro")
+script = null
 
 [node name="Panel4" type="Panel" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 1259.0
-offset_top = 400.0
-offset_right = 1659.0
-offset_bottom = 700.0
+offset_left = 97.0
+offset_top = 385.0
+offset_right = 497.0
+offset_bottom = 685.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_p4j5i")
+
+[node name="Panel3" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 94.0
+offset_top = 380.0
+offset_right = 494.0
+offset_bottom = 680.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oy5py")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -145,6 +168,7 @@ theme_override_constants/v_separation = 200
 columns = 2
 
 [node name="TextureButton" parent="GridContainer" instance=ExtResource("6_p4j5i")]
+z_index = 2
 layout_mode = 2
 stretch_mode = 3
 script = null
@@ -170,6 +194,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="TextureButton2" parent="GridContainer" instance=ExtResource("6_p4j5i")]
+z_index = 2
 layout_mode = 2
 stretch_mode = 3
 script = null

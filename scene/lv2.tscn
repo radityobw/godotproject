@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="3_s01qq"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="4_exahv"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="5_qxwgp"]
-[ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/notdragndrop.tscn" id="6_i5v5w"]
+[ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/tools/notdragndrop.tscn" id="6_i5v5w"]
 [ext_resource type="Texture2D" uid="uid://dj2wu2w0frmtp" path="res://assets/picture/EkspresiBahagia.png" id="7_n321l"]
 [ext_resource type="Texture2D" uid="uid://bcvi7pq7v25hq" path="res://assets/picture/EkspresiMarah.png" id="8_toxuh"]
 [ext_resource type="Texture2D" uid="uid://wvy58a8whnql" path="res://assets/picture/EkspresiSedih.png" id="9_jtmos"]

@@ -1,11 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://cym2vxhjtbsia"]
+[gd_scene load_steps=25 format=3 uid="uid://cym2vxhjtbsia"]
 
 [ext_resource type="Script" uid="uid://dfkobbirkb5f6" path="res://script/lv_1.gd" id="1_6tkh0"]
 [ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="1_cuwyf"]
 [ext_resource type="Texture2D" uid="uid://do47lnvlxitg4" path="res://assets/FreeGUI/png/Window.png" id="2_sfmxr"]
 [ext_resource type="Texture2D" uid="uid://s1suf4xyt0p3" path="res://assets/FreeGUI/png/Button.png" id="4_sf50q"]
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="5_ft67f"]
-[ext_resource type="Texture2D" uid="uid://bjiq7p8o703b2" path="res://assets/picture/minimizedinsideoutboldcat.jpeg" id="6_sf50q"]
+[ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/tools/notdragndrop.tscn" id="6_2bnf6"]
+[ext_resource type="Texture2D" uid="uid://dvh3xxeydrrgo" path="res://assets/picture/pagi.jpeg" id="7_nsr13"]
+[ext_resource type="Texture2D" uid="uid://3sycuo3mdoyn" path="res://assets/picture/siangsore.jpeg" id="8_ffkix"]
+[ext_resource type="Texture2D" uid="uid://bupw8my2mwqv4" path="res://assets/picture/malam.jpeg" id="9_y2qch"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
 texture = ExtResource("1_cuwyf")
@@ -22,12 +25,12 @@ region = Rect2(606, 2716, 181, 189)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsr13"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sf50q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tkh0"]
 atlas = ExtResource("4_sf50q")
 region = Rect2(1551, 972, 181, 190)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffkix"]
-texture = SubResource("AtlasTexture_sf50q")
+texture = SubResource("AtlasTexture_6tkh0")
 expand_margin_left = 2.0
 expand_margin_top = 2.0
 expand_margin_right = 2.0
@@ -38,6 +41,20 @@ expand_margin_bottom = 2.0
 [sub_resource type="AtlasTexture" id="AtlasTexture_mr52l"]
 atlas = ExtResource("2_sfmxr")
 region = Rect2(2150, 37, 703, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft67f"]
+atlas = ExtResource("4_sf50q")
+region = Rect2(173, 433, 425, 189)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgtd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ffkix"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mr52l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sps7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yftyq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -105,20 +122,123 @@ theme_override_font_sizes/font_size = 60
 text = "Jadwal Harian Anak"
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-visible = false
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -855.0
+offset_top = -463.0
+offset_right = 845.0
+offset_bottom = -263.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="PagiBtn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_icons/icon = SubResource("AtlasTexture_ft67f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtd5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ffkix")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mr52l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sps7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yftyq")
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/PagiBtn"]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 301.0
-offset_right = 2074.0
-offset_bottom = 887.0
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 248.0
+offset_bottom = 129.0
+theme_override_fonts/font = ExtResource("5_ft67f")
+theme_override_font_sizes/font_size = 50
+text = "Pagi"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+[node name="SiangSoreBtn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-columns = 4
+theme_override_icons/icon = SubResource("AtlasTexture_ft67f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtd5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ffkix")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mr52l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sps7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yftyq")
+expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/SiangSoreBtn"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 49.0
+offset_right = 306.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("5_ft67f")
+theme_override_font_sizes/font_size = 50
+text = "Siang - Sore"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MalamBtn" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
-texture = ExtResource("6_sf50q")
+theme_override_icons/icon = SubResource("AtlasTexture_ft67f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtd5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ffkix")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mr52l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5sps7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yftyq")
+expand_icon = true
+
+[node name="Label" type="Label" parent="HBoxContainer/MalamBtn"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 51.0
+offset_right = 246.0
+offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("5_ft67f")
+theme_override_font_sizes/font_size = 50
+text = "Malam"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = 588.0
+offset_top = 319.0
+offset_right = 1788.0
+offset_bottom = 617.0
+theme_override_constants/separation = 150
+alignment = 1
+
+[node name="TextureRect4" parent="HBoxContainer2" instance=ExtResource("6_2bnf6")]
+z_index = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture = ExtResource("7_nsr13")
+
+[node name="TextureRect3" parent="HBoxContainer2" instance=ExtResource("6_2bnf6")]
+z_index = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture = ExtResource("8_ffkix")
+
+[node name="TextureRect5" parent="HBoxContainer2" instance=ExtResource("6_2bnf6")]
+z_index = 1
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+texture = ExtResource("9_y2qch")
 
 [connection signal="pressed" from="TextureRect/Home" to="." method="_on_backlv1_pressed"]
+[connection signal="pressed" from="HBoxContainer/PagiBtn" to="." method="_on_pagi_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/SiangSoreBtn" to="." method="_on_siang_sore_btn_pressed"]
+[connection signal="pressed" from="HBoxContainer/MalamBtn" to="." method="_on_malam_btn_pressed"]

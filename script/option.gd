@@ -19,3 +19,8 @@ func _on_music_pressed() -> void:
 	else:
 		Backsound.play()
 		music_on = true
+
+
+func _on_unknown_pressed() -> void:
+	Backsound.stop()
+	get_tree().change_scene_to_file("res://scene//tools/dreamcore.tscn")

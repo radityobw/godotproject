@@ -8,6 +8,7 @@ extends Control
 
 
 func _ready() -> void:
+	
 	# Cek apakah plugin Android aktif
 	#if Engine.has_singleton(_plugin_name):
 		#_android_plugin = Engine.get_singleton(_plugin_name)

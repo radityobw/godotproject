@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl5qwc5js8ee4"]
+
+[ext_resource type="AudioStream" uid="uid://yb6alpqkd8q5" path="res://assets/music/correctsfx.mp3" id="1_74miw"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_74miw")
+volume_db = 20.0
