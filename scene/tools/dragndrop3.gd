@@ -8,21 +8,24 @@ func _ready():
 	#_load_texture_from_inventory()
 
 # --- DRAG ------------------------------------------------
-func _get_drag_data(_at_position):
+func _get_drag_data(_at_position:Vector2):
 	if texture == null:
 		return null
-
+	print(_at_position)
+	
 	SelectSfx.play()
 
 	var preview_texture = TextureRect.new()
 	preview_texture.texture = texture
+	
 	preview_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+	preview_texture.position=Vector2(-100,-100)
 	preview_texture.size = Vector2(181, 190)
-
 	var preview = Control.new()
+	
 	preview.add_child(preview_texture)
 	set_drag_preview(preview)
-
+	
 	var data = {
 		"texture": texture,
 		"source": self
