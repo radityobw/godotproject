@@ -390,6 +390,34 @@ script = ExtResource("8_p8qgw")
 layout_mode = 2
 script = ExtResource("8_p8qgw")
 
+[node name="scroll_10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_11" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_12" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_13" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_14" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_15" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
+[node name="scroll_16" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
+layout_mode = 2
+script = ExtResource("8_p8qgw")
+
 [node name="openscrollbtn" type="Button" parent="."]
 z_index = -1
 custom_minimum_size = Vector2(181, 190)

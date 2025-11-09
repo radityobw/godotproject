@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bhr4pbfcnfr4m"]
+[gd_scene load_steps=38 format=3 uid="uid://bhr4pbfcnfr4m"]
 
 [ext_resource type="Script" uid="uid://bw8aolxxxhuxm" path="res://script/takut.gd" id="1_udnt8"]
 [ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="2_x7ou4"]
@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://cxh88to8mitlu" path="res://assets/brady_bunch/BradBunR.ttf" id="5_edvb7"]
 [ext_resource type="PackedScene" uid="uid://dwpr14r382rxj" path="res://scene/tools/notdragndrop.tscn" id="6_g3exd"]
 [ext_resource type="Texture2D" uid="uid://ci46c01jtrbyd" path="res://assets/picture/EkspresiTakut.png" id="7_32c1g"]
+[ext_resource type="Texture2D" uid="uid://btby7iqw7md5g" path="res://scene/emosi/takut/menghadapi.JPG" id="8_bpn0c"]
+[ext_resource type="Texture2D" uid="uid://hyh8lsilfxcq" path="res://scene/emosi/takut/bersembunyi2.JPG" id="9_rqemh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
 texture = ExtResource("2_x7ou4")
@@ -188,12 +190,12 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -855.0
-offset_top = -463.0
+offset_top = -403.0
 offset_right = 845.0
-offset_bottom = -263.0
+offset_bottom = -203.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 200
+theme_override_constants/separation = 800
 alignment = 1
 
 [node name="Btn1" type="Button" parent="HBoxContainer"]
@@ -288,6 +290,31 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_kd7sd")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -800.0
+offset_top = 245.0
+offset_right = 800.0
+offset_bottom = 645.0
+grow_horizontal = 2
+theme_override_constants/separation = 800
+alignment = 1
+
+[node name="TextureRect4" parent="HBoxContainer2" instance=ExtResource("6_g3exd")]
+z_index = 1
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("8_bpn0c")
+
+[node name="TextureRect5" parent="HBoxContainer2" instance=ExtResource("6_g3exd")]
+z_index = 1
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("9_rqemh")
 
 [connection signal="pressed" from="TextureRect/Home" to="." method="_on_backtakut_pressed"]
 [connection signal="pressed" from="HBoxContainer/Btn1" to="." method="_on_btn_1_pressed"]
