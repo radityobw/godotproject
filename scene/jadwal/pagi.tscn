@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://droushd2g1vql"]
+[gd_scene load_steps=50 format=3 uid="uid://droushd2g1vql"]
 
 [ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="1_7hy8h"]
 [ext_resource type="Script" uid="uid://dr63vm6jpr37q" path="res://script/jadwal.gd" id="1_atrki"]
@@ -8,7 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://8e772vyhgfrr" path="res://scene/tools/dragndrop.tscn" id="5_lbf2m"]
 [ext_resource type="Script" uid="uid://cn4ml40vlmp6m" path="res://script/grid_container.gd" id="6_cw85m"]
 [ext_resource type="Script" uid="uid://dq04uttsrfd2s" path="res://script/v_box_container.gd" id="8_8l2ir"]
-[ext_resource type="Texture2D" uid="uid://d2fqv5eqg4cif" path="res://icons/ioboldcat.png" id="8_cw85m"]
+[ext_resource type="Texture2D" uid="uid://cl3a2c3ltfti2" path="res://scene/jadwal/pagi/BangunDariTempatTidur.jpg" id="9_6f31m"]
+[ext_resource type="Texture2D" uid="uid://blnoc67nc51q6" path="res://scene/jadwal/pagi/Berolahraga.png" id="10_i44sy"]
+[ext_resource type="Texture2D" uid="uid://d2td3dmui42bl" path="res://scene/jadwal/pagi/bersepeda.png" id="11_ls2gx"]
+[ext_resource type="Texture2D" uid="uid://52vca23cdc00" path="res://scene/jadwal/pagi/mandi.png" id="12_7eccb"]
+[ext_resource type="Texture2D" uid="uid://cf1wr6cyvcdtw" path="res://scene/jadwal/pagi/memakaibaju.jpg" id="13_1t3pj"]
+[ext_resource type="Texture2D" uid="uid://dki3r37eg8ove" path="res://scene/jadwal/pagi/MenggosokGigi2.png" id="14_l2bip"]
+[ext_resource type="Texture2D" uid="uid://b228pw2eekx8" path="res://scene/jadwal/pagi/menyisirrambut.jpg" id="15_o5vgh"]
+[ext_resource type="Texture2D" uid="uid://smll8ejlqbi" path="res://scene/jadwal/pagi/merapihkantempattidur.jpg" id="16_n5ffe"]
+[ext_resource type="Texture2D" uid="uid://cu8rmx2x6sjrx" path="res://scene/jadwal/pagi/Minumair.png" id="17_6w36e"]
+[ext_resource type="Texture2D" uid="uid://153ljkksq58j" path="res://scene/jadwal/pagi/PergiKeSekolah.png" id="18_0uadt"]
+[ext_resource type="Texture2D" uid="uid://ctl1x1s8kle1g" path="res://scene/jadwal/pagi/pulangkerumah.jpg" id="19_blb0r"]
+[ext_resource type="Texture2D" uid="uid://c5g0bftkt34x3" path="res://scene/jadwal/pagi/Sarapan.jpg" id="20_8ilch"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
 texture = ExtResource("1_7hy8h")
@@ -335,45 +346,51 @@ script = ExtResource("8_8l2ir")
 
 [node name="scroll_0" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("9_6f31m")
 
 [node name="scroll_1" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("10_i44sy")
 
 [node name="scroll_2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("11_ls2gx")
 
 [node name="scroll_3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("12_7eccb")
 
 [node name="scroll_4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("13_1t3pj")
 
 [node name="scroll_5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("14_l2bip")
 
 [node name="scroll_6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("15_o5vgh")
 
 [node name="scroll_7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("16_n5ffe")
 
 [node name="scroll_8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
-texture = ExtResource("8_cw85m")
+texture = ExtResource("17_6w36e")
 
 [node name="scroll_9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("18_0uadt")
 
 [node name="scroll_10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("19_blb0r")
 
 [node name="scroll_11" parent="ScrollContainer/VBoxContainer" instance=ExtResource("5_lbf2m")]
 layout_mode = 2
+texture = ExtResource("20_8ilch")
 
 [node name="openscrollbtn" type="Button" parent="."]
 z_index = -1

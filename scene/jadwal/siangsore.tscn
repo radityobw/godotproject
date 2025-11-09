@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dtdhomnjs6vs4"]
+[gd_scene load_steps=56 format=3 uid="uid://dtdhomnjs6vs4"]
 
 [ext_resource type="Script" uid="uid://dr63vm6jpr37q" path="res://script/jadwal.gd" id="1_r73ru"]
 [ext_resource type="Texture2D" uid="uid://dyaghlpxa838g" path="res://assets/FreeGUI/png/BG.png" id="2_p8qgw"]
@@ -9,7 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://8e772vyhgfrr" path="res://scene/tools/dragndrop.tscn" id="7_a1itv"]
 [ext_resource type="Script" uid="uid://d1xloqnty8od" path="res://scene/tools/dragndrop2.gd" id="8_p8qgw"]
 [ext_resource type="Script" uid="uid://dq04uttsrfd2s" path="res://script/v_box_container.gd" id="8_yag5k"]
-[ext_resource type="Texture2D" uid="uid://d2fqv5eqg4cif" path="res://icons/ioboldcat.png" id="9_t0k2n"]
+[ext_resource type="Texture2D" uid="uid://y6lkigx5g6ef" path="res://scene/jadwal/siangsore/BERMAINBERSAMA.png" id="10_x6noi"]
+[ext_resource type="Texture2D" uid="uid://bjasjil51g8lt" path="res://scene/jadwal/siangsore/bermaindenganteman.jpg" id="11_4dlns"]
+[ext_resource type="Texture2D" uid="uid://d8xqo8ouilk2" path="res://scene/jadwal/siangsore/BermainPetakUmpet.png" id="12_uaeu5"]
+[ext_resource type="Texture2D" uid="uid://npeis0fwedf" path="res://scene/jadwal/siangsore/BermainPiano.jpg" id="13_pf58n"]
+[ext_resource type="Texture2D" uid="uid://drs5odpai8pjo" path="res://scene/jadwal/siangsore/bernyanyi.jpg" id="14_o3ifw"]
+[ext_resource type="Texture2D" uid="uid://c1q828b8wprfl" path="res://scene/jadwal/siangsore/Bersepeda2.png" id="15_mj13m"]
+[ext_resource type="Texture2D" uid="uid://cypdxvino7git" path="res://scene/jadwal/siangsore/MakanSiang.jpg" id="16_wteqk"]
+[ext_resource type="Texture2D" uid="uid://dw4858q4amx3a" path="res://scene/jadwal/siangsore/Melukis.png" id="17_feyvj"]
+[ext_resource type="Texture2D" uid="uid://bmp02vr2yrt1g" path="res://scene/jadwal/siangsore/Membacabuku.png" id="18_itwvh"]
+[ext_resource type="Texture2D" uid="uid://d12dsetk26mpm" path="res://scene/jadwal/siangsore/menari.jpg" id="19_phkdj"]
+[ext_resource type="Texture2D" uid="uid://dy7vroo8p20p7" path="res://scene/jadwal/siangsore/mencucibaju.jpg" id="20_mmt2w"]
+[ext_resource type="Texture2D" uid="uid://c3ulkt0ns3wyr" path="res://scene/jadwal/siangsore/mencucimobil.jpg" id="21_nn4ce"]
+[ext_resource type="Texture2D" uid="uid://hwqit02s6nl2" path="res://scene/jadwal/siangsore/mencucipiring.jpg" id="22_xyndb"]
+[ext_resource type="Texture2D" uid="uid://dqvxnlkhvw5tc" path="res://scene/jadwal/siangsore/MencuciTangan.png" id="23_rtv8q"]
+[ext_resource type="Texture2D" uid="uid://bj2b45l4ujlxd" path="res://scene/jadwal/siangsore/Menyapu.jpg" id="24_kvfvg"]
+[ext_resource type="Texture2D" uid="uid://bd84ed0hhs7eq" path="res://scene/jadwal/siangsore/PulangKeRumah2.jpg" id="25_qh74w"]
+[ext_resource type="Texture2D" uid="uid://cutxpdptljkjc" path="res://scene/jadwal/siangsore/renang.jpg" id="26_nqfv8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfmxr"]
 texture = ExtResource("2_p8qgw")
@@ -346,76 +362,87 @@ script = ExtResource("8_yag5k")
 
 [node name="scroll_0" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("10_x6noi")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_1" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("11_4dlns")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("12_uaeu5")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("13_pf58n")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("14_o3ifw")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("15_mj13m")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("16_wteqk")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("17_feyvj")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
-texture = ExtResource("9_t0k2n")
+texture = ExtResource("18_itwvh")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("19_phkdj")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("20_mmt2w")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_11" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("21_nn4ce")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_12" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("22_xyndb")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_13" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("23_rtv8q")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_14" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("24_kvfvg")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_15" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("25_qh74w")
 script = ExtResource("8_p8qgw")
 
 [node name="scroll_16" parent="ScrollContainer/VBoxContainer" instance=ExtResource("7_a1itv")]
 layout_mode = 2
+texture = ExtResource("26_nqfv8")
 script = ExtResource("8_p8qgw")
 
 [node name="openscrollbtn" type="Button" parent="."]
