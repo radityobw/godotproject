@@ -17,6 +17,7 @@ func _get_drag_data(_at_position):
 	var preview_texture = TextureRect.new()
 	preview_texture.texture = texture
 	preview_texture.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+	preview_texture.position=Vector2(-100,-100)
 	preview_texture.size = Vector2(181, 190)
 
 	var preview = Control.new()
