@@ -1,4 +1,4 @@
-````markdown
+
 # 🌱 Langkah Kecil  
 ### *"Game edukatif dengan sentuhan emosi dan perhatian untuk setiap anak."*
 
@@ -37,7 +37,7 @@ Dikembangkan menggunakan **Godot Engine v4.5**, aplikasi ini menggabungkan perma
 | 📅 **Custom Schedule Manager** | Fitur untuk mengatur jadwal anak secara visual        |
 
 ---
-````
+
 ## 🛠️ Cara Menjalankan Proyek
 
 1. **Clone repositori ini**
@@ -102,8 +102,4 @@ Jika kamu percaya pada misi kami untuk membuat pendidikan inklusif lebih menyena
 
 > **Langkah Kecil — karena setiap anak berhak belajar dengan bahagia.**
 
-```
 
----
-
-```
