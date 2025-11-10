@@ -1,9 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ryocantsleep.localnotif">
-
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-    <application>
-        <receiver android:name="com.ryocantsleep.LocalNotificationReceiver" android:exported="true" />
-    </application>
-</manifest>
