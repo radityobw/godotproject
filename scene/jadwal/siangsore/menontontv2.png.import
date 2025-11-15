@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://conxi0ejnrohs"
-path="res://.godot/imported/bahlililil.jpg-f17d4df55f7cc5f681dce5bfaa843bc2.ctex"
+uid="uid://vlfbuxp24mqd"
+path="res://.godot/imported/menontontv2.png-e2231bbace732c7aa947a189922e3938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://z-another/bahlililil.jpg"
-dest_files=["res://.godot/imported/bahlililil.jpg-f17d4df55f7cc5f681dce5bfaa843bc2.ctex"]
+source_file="res://scene/jadwal/siangsore/menontontv2.png"
+dest_files=["res://.godot/imported/menontontv2.png-e2231bbace732c7aa947a189922e3938.ctex"]
 
 [params]
 

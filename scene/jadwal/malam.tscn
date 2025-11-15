@@ -401,6 +401,7 @@ script = ExtResource("7_35syr")
 [node name="scroll_8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("8_8q12e")]
 visible = false
 layout_mode = 2
+texture = ExtResource("18_wc3hj")
 script = ExtResource("7_35syr")
 
 [node name="scroll_9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("8_8q12e")]
